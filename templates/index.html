@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+     <header>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+     </header>
+      <body>
+
+        
+            <div class="container">
+               <br />
+               {% if not short_url %}
+               <div class="row">
+                  <div class="col-md-offset-5 col-md-3">
+                     <h4>Enter URL to shorten.</h4>
+                     <form method="post" class="navbar-form navbar-right" action="">
+                        <div class="form-group">
+                           <input type="text" id="url" name="url" class="form-control input-lg chat-input" placeholder="URL" />
+                           <button type="submit" class="btn btn-lg btn-info">Submit</button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+               {% else %}
+               <div>
+                  your shortened URL is: <a href="{{short_url}}"> {{short_url}}</a>
+               </div>
+               {% endif %}
+            </div>
+         
+
+      </body>
+   </html>
